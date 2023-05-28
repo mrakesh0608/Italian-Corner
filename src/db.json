@@ -1,0 +1,78 @@
+{
+    "categories": {
+        "Burger": {
+            "desc": "Sizzling, Juicy, Flavorful Burger Extravaganza!",
+            "img": "https://firebasestorage.googleapis.com/v0/b/myitaliancorner.appspot.com/o/burger.webp?alt=media&token=3a3791ca-88e5-46cf-9436-8040641316f2",
+            "variants": [
+                "Burger-1",
+                "Burger-2",
+                "Burger-3"
+            ]
+        },
+        "Pasta": {
+            "desc": "Delicious, al dente pasta perfection.",
+            "img": "https://firebasestorage.googleapis.com/v0/b/myitaliancorner.appspot.com/o/pasta.webp?alt=media&token=bd79ed17-1768-465d-9ae8-f77493bdfc4e",
+            "variants": [
+                "Pasta-1",
+                "Pasta-2",
+                "Pasta-3"
+            ]
+        },
+        "Pizza": {
+            "desc": "Irresistible, Cheesy, Flavorful Pizza Delight.",
+            "img": "https://firebasestorage.googleapis.com/v0/b/myitaliancorner.appspot.com/o/pizza.webp?alt=media&token=034f988d-a5f9-47dd-92d8-15d59b15ee1f",
+            "variants": [
+                "Pizza-1",
+                "Pizza-2",
+                "Pizza-3"
+            ]
+        }
+    },
+    "items": {
+        "Burger-1": {
+            "title": "Veg Burger",
+            "price": 30,
+            "type": "Veg"
+        },
+        "Burger-2": {
+            "title": "Chicken Burger",
+            "price": 65,
+            "type": "Non Veg"
+        },
+        "Burger-3": {
+            "title": "Egg Burger",
+            "price": 50,
+            "type": "Egg"
+        },
+        "Pizza-1": {
+            "title": "Onion & Capsicum Pizza",
+            "price": 95,
+            "type": "Veg"
+        },
+        "Pizza-2": {
+            "title": "Corn Pizza",
+            "price": 110,
+            "type": "Veg"
+        },
+        "Pizza-3": {
+            "title": "Paneer Pizza",
+            "price": 130,
+            "type": "Veg"
+        },
+        "Pasta-1": {
+            "title": "White Sause Pasta",
+            "price": 70,
+            "type": "Veg"
+        },
+        "Pasta-2": {
+            "title": "Mix Sause Pasta",
+            "price": 95,
+            "type": "Veg"
+        },
+        "Pasta-3": {
+            "title": "Red Sause Pasta",
+            "price": 85,
+            "type": "Veg"
+        }
+    }
+}

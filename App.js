@@ -1,20 +1,32 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import 'react-native-gesture-handler';
+import 'expo-dev-client'; //for Expo Development
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+import {
+    TouchableWithoutFeedback, Keyboard
+    , Platform, UIManager,
+} from 'react-native';
+
+import { LoaderContextProvider } from '#src/context/LoaderContext';
+import { AuthContextProvider } from '#src/context/AuthContext';
+import { ThemeContextProvider } from '#src/context/ThemeContext';
+
+import Navigator from "#src/navigation/Navigator";
+
+//to animate TextInput, etc.
+if (Platform.OS === 'android' && UIManager.setLayoutAnimationEnabledExperimental) {
+    UIManager.setLayoutAnimationEnabledExperimental(true);
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default function App() {
+    return (
+        <LoaderContextProvider>
+            <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
+                <AuthContextProvider>
+                    <ThemeContextProvider>
+                        <Navigator />
+                    </ThemeContextProvider>
+                </AuthContextProvider>
+            </TouchableWithoutFeedback>
+        </LoaderContextProvider>
+    );
+}

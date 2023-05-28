@@ -1,11 +1,12 @@
 {
   "expo": {
-    "name": "italian-corner",
+    "name": "Italian Corner",
     "slug": "italian-corner",
-    "version": "1.0.0",
+    "scheme": "ItalianCorner",
+    "version": "0.1.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
+    "userInterfaceStyle": "automatic",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
@@ -15,16 +16,38 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.mrakesh0608.ItalianCorner",
+      "googleServicesFile": "./configs/GoogleService-Info.plist"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.mrakesh0608.ItalianCorner",
+      "googleServicesFile": "./configs/google-services.json",
+      "permissions": [
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.ACCESS_FINE_LOCATION",
+        "android.permission.FOREGROUND_SERVICE"
+      ]
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "@react-native-firebase/app",
+      "@react-native-firebase/auth",
+      "@react-native-google-signin/google-signin",
+      "expo-image-picker",
+      "expo-location",
+      "./plugins/withAndroidVerifiedLinksWorkaround"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "a6deb31d-2c6f-474a-a1b2-77d1f5d56337"
+      }
     }
   }
 }
