@@ -85,3 +85,18 @@ export async function addOrder(payload: any, cb: any) {
             cb(error, null);
         })
 }
+
+export function updateOrderById(id, payload, cb) {
+    if (!auth().currentUser) return;
+
+    firestore()
+        .collection('Orders')
+        .doc(id)
+        .update(payload)
+        .then((res) => {
+            cb({ status: 200 })
+        })
+        .catch(error => {
+            utils.ToastErrorOfFirebase(error);
+        })
+}

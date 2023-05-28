@@ -49,7 +49,7 @@ export default function MyOrdersScreen({ navigation }) {
                     querySnap.forEach(docSnap => {
 
                         const val = docSnap.data()
-                        if (val?.createdAt && val.uid === auth().currentUser.uid) { //temp sol for where clause
+                        if (val?.createdAt && val.uid === auth().currentUser.uid) { //temp sol to where clause
 
                             let date = getDate(val.createdAt.toDate());
 

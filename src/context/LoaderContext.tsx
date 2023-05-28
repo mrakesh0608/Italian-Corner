@@ -1,10 +1,10 @@
 import React, { createContext, useContext, useReducer, useEffect } from 'react'
+import remoteConfig from '@react-native-firebase/remote-config';
 
 import {
     Entypo, Ionicons, FontAwesome, Fontisto, Octicons,
     MaterialIcons, MaterialCommunityIcons
 } from '@expo/vector-icons';
-
 import * as Font from 'expo-font';
 
 interface contextProps {
@@ -50,6 +50,12 @@ export const LoaderContextProvider = ({ children }) => {
     useEffect(() => {
         (async () => {
             try {
+                remoteConfig()
+                    .fetchAndActivate()
+                    .then(fetchedRemotely => {
+                        // if (fetchedRemotely) console.log('Configs were retrieved from the backend and activated.');
+                        // else console.log('No configs were fetched from the backend, and the local configs were already activated');
+                    });
                 await Font.loadAsync(Entypo.font);
                 await Font.loadAsync(FontAwesome.font);
                 await Font.loadAsync(Fontisto.font);

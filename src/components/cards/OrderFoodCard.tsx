@@ -22,7 +22,7 @@ export function OrderFoodCard({
     const { colors } = useThemeContext();
     const styles = makeStyles({ colors });
 
-    console.log(item);
+    // console.log(item);
 
     item['title'] = list.items[item['id']]?.title
 

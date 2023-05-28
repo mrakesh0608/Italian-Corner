@@ -6,14 +6,22 @@ import { useThemeContext } from '#src/context/ThemeContext';
 import { Text } from '../Text'
 import { CenterView } from './CenterView';
 
-export function LoadingComp({ title = 'Loading' }: {
-    title?: string
+export function LoadingComp({
+    title = 'Loading',
+    showInRow = true
+}: {
+    title?: string,
+    showInRow?: boolean
 }) {
 
     const { colors } = useThemeContext();
 
-    return <CenterView style={{ flexDirection: 'row' }}>
-        <Text style={{ fontSize: 18 }}>{title}</Text>
+    return <CenterView style={showInRow ? {
+        flexDirection: 'row'
+    } : {
+        flexDirection: 'column-reverse'
+    }}>
+        <Text style={{ fontSize: 18, textAlign: 'center' }}>{title}</Text>
         <ActivityIndicator
             color={colors.text}
             style={{ marginLeft: 12 }}

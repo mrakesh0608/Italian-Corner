@@ -1,9 +1,10 @@
 import { useEffect } from 'react'
 import auth from '@react-native-firebase/auth';
 import * as Location from 'expo-location';
-
+import remoteConfig from '@react-native-firebase/remote-config';
 import firestore from '@react-native-firebase/firestore';
 import * as firebase from '#src/firebase';
+
 import list from '#src/db.json';
 
 export function useInitUser({
@@ -16,7 +17,7 @@ export function useInitUser({
 
             if (!user) dispatch({ type: 'INIT' })
             else {
-                console.log(user);
+                // console.log(user);
 
                 dispatch({ type: 'SET_USER', payload: user });
                 await firebase.initNewUser({ theme });
@@ -85,7 +86,7 @@ export function useInitUser({
     useEffect(() => {
         if (!user) return;
 
-        console.log(cart);
+        // console.log(cart);
 
         const bill = {
             price: 0,
@@ -105,4 +106,23 @@ export function useInitUser({
         })
         dispatch({ type: 'SET_BILL', payload: { ...bill, grandTotal: bill.price + bill.delivery } })
     }, [cart, user]);
+
+    // //update Menu on User Change
+    // useEffect(() => {
+    //     if (!user) return;
+
+    //     const unsubscriber = firestore()
+    //         .collection('Menu')
+    //         .doc(remoteConfig().getValue('Menu_ID').asString())
+    //         .onSnapshot(querySnap => {
+    //             try {
+    //                 const data = querySnap?.data()
+    //                 dispatch({ type: 'SET_MENU', payload: { ...data } });
+    //             } catch (error) {
+    //                 console.log(error);
+    //             }
+    //         });
+
+    //     return unsubscriber;
+    // }, [user]);
 }

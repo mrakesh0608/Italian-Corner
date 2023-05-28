@@ -12,7 +12,7 @@ export function OrderCard({ order }) {
 
     const { colors } = useThemeContext();
     const { navigate } = useNavigation();
-    console.log(order);
+    // console.log(order);
 
     return (
         <TouchableOpacity onPress={() => navigate('Order Details' as never, { id: order.id, data: { ...order } } as never)}>
@@ -20,7 +20,7 @@ export function OrderCard({ order }) {
                 <View style={styles.container}>
                     <Text style={{ fontSize: 16, fontWeight: 'bold' }}>{order.id}</Text>
                     <Text style={{
-                        color: order.isDetected ? colors.error : colors.success,
+                        color: order.status === 'Cancelled' ? colors.error : colors.success,
                         fontWeight: 'bold'
                     }}>{order.status}</Text>
                 </View>
