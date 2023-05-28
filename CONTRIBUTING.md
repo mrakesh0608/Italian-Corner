@@ -23,7 +23,7 @@ If you have a suggestion that would make this better, please fork the repo and c
 
 
 ### Development Build
-- For Android, download development build apk from this [link](https://firebasestorage.googleapis.com/v0/b/myitaliancorner.appspot.com/o/binary%2Fandroid-dev.apk?alt=media&token=e186f49c-4cc8-4e03-b443-68a9b3c952e8).<div align='center'>OR</div>Build your own development apk using `npm run build-dev-apk` & download it from [Expo dev](https://expo.dev/).
+- For Android, download development build apk from this [link](https://github.com/mrakesh0608/Italian-Corner/releases/download/v0.1.0/Italian-Corner-Dev.apk).<div align='center'>OR</div>Build your own development apk using `npm run build-dev-apk` & download it from [Expo dev](https://expo.dev/).
 - Install development build apk in your Android device.
 - Start metro bundler `npm start`
 - Start metro bundler with empty cache `npm run start-c`
