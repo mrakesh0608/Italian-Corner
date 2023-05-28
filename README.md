@@ -20,7 +20,7 @@
 Italian Corner is the ultimate food app that delivers authentic Italian cuisine to your doorstep, offering a culinary journey through Italy's finest flavors. From classic pasta dishes and heavenly pizzas to mouthwatering burgers, indulge in a delicious bite that will transport your taste buds to the heart of Italy.
 
 ## ⬇️ Download Android App
-- Download Italian Corner app using this [link](https://firebasestorage.googleapis.com/v0/b/myitaliancorner.appspot.com/o/binary%2Fandroid-prod.apk?alt=media&token=759a196e-c7e8-4949-92c9-0ae87b8ea596).
+- Download Italian Corner app either from [link-1](https://firebasestorage.googleapis.com/v0/b/myitaliancorner.appspot.com/o/binary%2Fandroid-prod.apk?alt=media&token=759a196e-c7e8-4949-92c9-0ae87b8ea596) or [link-2](https://expo.dev/artifacts/eas/b66qGuRRx7P2y1EtRCxieS.apk).
 - See screenshots of this app [here](./SCREENSHOTS.md).
 ## 🔧 Tools/Technologies Used
 
