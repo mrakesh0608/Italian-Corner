@@ -13,7 +13,7 @@ If you have a suggestion that would make this better, please fork the repo and c
 5. Open a Pull Request
 
 ## Setup
-- Change directory into frontend `cd Italian-Corner/frontEnd`
+- Change directory into root folder of application `cd Italian-Corner`
 - Install dependencies `npm i` 
 - To install the [EAS CLI](https://expo.dev/eas) for builds `npm i -g eas-cli`
 - Copy your configuration files into configs folder
